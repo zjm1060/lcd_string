@@ -4,7 +4,7 @@
  *  Created on: 2011-10-17
  *      Author: zjm
  */
-#include "includes.h"
+#include "../includes.h"
 #include "font.h"
 
 const unsigned char font_6x12[1152] = {

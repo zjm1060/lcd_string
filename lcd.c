@@ -246,7 +246,7 @@ int LCD_DrawChar(int X,int Y,tFont *font,short ch)
 
 	if(font->GetSymbol(font,ch,&symbol) != 0)
 		return 0;
-	pChImage = symbol.symbol;
+	pChImage = (uint8_t *)symbol.symbol;
 	y = Y;
 	for(yCnt=0;yCnt<(symbol.h);yCnt++){
 		x = X;
@@ -293,7 +293,7 @@ int LCD_DrawString(int x,int y,tFont *font,const char *string)
 
 			x = 0;
 
-			y += font->GetSymbolMaxHight(font);
+			y += font->GetSymbolMaxHight(font, 0);
 		}
 
 		x += LCD_DrawChar(x,y,font,ch);

@@ -25,7 +25,7 @@ typedef struct __Font{
 	int (*GetSymbol)(struct __Font *,unsigned short,tSymbol *);
 	int (*GetSymbolWidth)(struct __Font *,unsigned short);
 	int (*GetSymbolHight)(struct __Font *,unsigned short);
-	int (*GetSymbolMaxHight)(struct __Font *);
+	int (*GetSymbolMaxHight)(struct __Font *,unsigned short);
 }tFont;
 
 extern tFont Font_6X12;
